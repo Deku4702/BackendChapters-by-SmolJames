@@ -1,0 +1,26 @@
+### GET /
+GET http://localhost:5000
+
+
+###Register a user POST/Auth/Register
+###
+POST http://localhost:5000/auth/register
+Content-Type: application/json
+
+{
+    "username" : "games",
+    "password" : "12451245"
+}
+
+###Login a user POST/Auth/login
+
+###
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+    "username" : "games",
+    "password" : "12451245"
+}
+
+
