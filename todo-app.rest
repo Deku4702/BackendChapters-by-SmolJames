@@ -8,8 +8,8 @@ POST http://localhost:5000/auth/register
 Content-Type: application/json
 
 {
-    "username" : "games",
-    "password" : "12451245"
+    "username" : "workera",
+    "password" : "12541254"
 }
 
 ###Login a user POST/Auth/login
@@ -19,8 +19,8 @@ POST http://localhost:5000/auth/login
 Content-Type: application/json
 
 {
-    "username" : "games",
-    "password" : "12451245"
+    "username" : "workera",
+    "password" : "12541254"
 }
 
 
