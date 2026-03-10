@@ -1,26 +1,53 @@
 ### GET /
-GET http://localhost:5000
+GET http://localhost:2000/
 
 
 ###Register a user POST/Auth/Register
 ###
-POST http://localhost:5000/auth/register
+POST http://localhost:2000/auth/register
 Content-Type: application/json
 
 {
-    "username" : "workera",
-    "password" : "12541254"
+    "username" : "workeras@gmail.com",
+    "password" : "1254125g4"
 }
 
 ###Login a user POST/Auth/login
 
 ###
-POST http://localhost:5000/auth/login
+POST http://localhost:2000/auth/login
 Content-Type: application/json
 
 {
-    "username" : "workera",
-    "password" : "12541254"
+    "username" : "workeras@gmail.com",
+    "password" : "1254125g4"
+}
+
+### fetch all todos GET/TODOS(protected)
+GET http://localhost:2000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzczMTYyNDEwLCJleHAiOjE3NzMyNDg4MTB9.hYBM53_IWlZ-z5muTqq1uY7FAyJ8Zm-SyJVafYzA70c
+
+### create a new todo POST/TODOS
+POST http://localhost:2000/todos
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzczMTYyNTUwLCJleHAiOjE3NzMyNDg5NTB9.mg40dAmKg9Ft5PVx4e0jiGOpj45ba8r-J0SCodjJMe4
+
+{
+ "task": "Drink 2 litre water"
+}
+
+### Update a todo Put / TODOS/ :id(protected)
+
+PUT http://localhost:2000/todos/1?page=4
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzczMTYyNTUwLCJleHAiOjE3NzMyNDg5NTB9.mg40dAmKg9Ft5PVx4e0jiGOpj45ba8r-J0SCodjJMe4
+
+{
+    "completed": 1
 }
 
 
+### Delete a todo PUT/ TODOS / :id(protected)
+DELETE http://localhost:2000/todos/1?page=4
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzczMTYyNTUwLCJleHAiOjE3NzMyNDg5NTB9.mg40dAmKg9Ft5PVx4e0jiGOpj45ba8r-J0SCodjJMe4

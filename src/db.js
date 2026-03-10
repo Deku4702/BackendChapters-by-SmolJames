@@ -11,8 +11,10 @@ db.exec(`
         );
     `)
 
+    //In Big organization use soft delete, mean a boolean value will be set to 1. actual data is saved in the dataBase
 db.exec(`
         CREATE TABLE todos(
+        
            id INTEGER PRIMARY KEY AUTOINCREMENT,
            user_id INTEGER,
            task TEXT,
